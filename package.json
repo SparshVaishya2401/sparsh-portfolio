@@ -1,19 +1,17 @@
-
-  {
-    "name": "sparsh-portfolio",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-      "cra-template": "1.2.0",
-      "emailjs-com": "^3.2.0",
-      "framer-motion": "^11.17.0",
-      "next": "^15.1.3",
-      "react": "^19.0.0",
-      "react-dom": "^19.0.0",
-      "react-icons": "^5.4.0",
-      "react-router-dom": "^7.1.1",
-      "react-scripts": "5.0.1"
-    },
+{
+  "name": "sparsh-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cra-template": "1.2.0",
+    "emailjs-com": "^3.2.0",
+    "framer-motion": "^11.17.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.4.0",
+    "react-router-dom": "^7.1.1",
+    "react-scripts": "5.0.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -56,5 +54,5 @@
   "bugs": {
     "url": "https://github.com/SparshVaishya2401/sparsh-portfolio/issues"
   },
-  "homepage": "https://github.com/SparshVaishya2401/sparsh-portfolio#readme"
+  "homepage": "http://."
 }
