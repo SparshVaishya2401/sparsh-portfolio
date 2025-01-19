@@ -1,0 +1,252 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+/* Custom Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes gradient-x {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 400% 400%;
+  animation: gradient-x 15s ease infinite;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.8s ease-out forwards;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.animate-zoom-in {
+  animation: zoom-in 0.8s ease-out forwards;
+}
+
+/* Custom Utility Classes */
+.gradient-text {
+  background: linear-gradient(90deg, #1e3a8a, #2563eb, #4f46e5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fancy-border {
+  border: 2px solid transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(90deg, #1e3a8a, #2563eb, #4f46e5);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.glow-effect {
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.6);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.glow-effect:hover {
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.9);
+  transform: scale(1.05);
+}
+
+/* Light & Dark Mode */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+body.dark {
+  --color-bg: #111827;
+  --color-text: #f7fafc;
+}
+
+body.light {
+  --color-bg: #ffffff;
+  --color-text: #1a202c;
+}
+
+/* Navbar Styles */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+nav ul {
+  display: flex;
+  gap: 16px;
+}
+
+nav ul li a {
+  color: inherit;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #4f46e5;
+}
+
+/* Header Styles */
+header {
+  padding: 120px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f7fafc;
+}
+
+header p {
+  font-size: 1.25rem;
+  margin-top: 8px;
+  color: #e2e8f0;
+}
+
+header .flex {
+  display: flex;
+  gap: 24px;
+}
+
+header .flex a {
+  font-size: 1rem;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+header .flex a:hover {
+  color: #e2e8f0;
+}
+
+/* Section Styles */
+section {
+  padding: 60px 20px;
+}
+
+section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+section p {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  color: #4a5568;
+}
+
+section .grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+/* Button Styles */
+button {
+  background-color: #3182ce;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #2b6cb0;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* Footer Styles */
+footer {
+  background-color: #2d3748;
+  padding: 20px;
+  color: #e2e8f0;
+}
+
+footer p {
+  font-size: 0.875rem;
+}
