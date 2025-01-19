@@ -29,11 +29,11 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_hd7oy7j",
-        "template_600n6pl",
-        e.target,
-        "aBxH5-T7Mxn-pGURT"
-      )
+         process.env.REACT_APP_EMAILJS_SERVICE_ID,
+         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+         e.target,
+         process.env.REACT_APP_EMAILJS_USER_ID
+       )
       .then(
         (result) => {
           setIsSubmitted(true);
